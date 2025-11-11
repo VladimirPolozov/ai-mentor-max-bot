@@ -3,9 +3,13 @@
 
 import aiomax
 import logging
+from dotenv import load_dotenv
 
 
-bot = aiomax.Bot("TOKEN", default_format="markdown")
+load_dotenv()
+
+
+bot = aiomax.Bot("MAX_BOT_TOKEN", default_format="markdown")
 
 
 if __name__ == "__main__":
