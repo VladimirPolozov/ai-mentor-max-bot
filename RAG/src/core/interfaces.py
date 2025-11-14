@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
-from src.core.entities import Document, VectorSearchResult, LLMResponse
+from RAG.src.core.entities import Document, VectorSearchResult, LLMResponse
 
 
 class IVectorStore(ABC):

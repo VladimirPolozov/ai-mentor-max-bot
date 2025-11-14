@@ -4,9 +4,9 @@ import asyncio
 import chromadb
 from chromadb.config import Settings
 
-from src.core.entities import Document, VectorSearchResult
-from src.core.interfaces import IVectorStore
-from src.application.services.EmbeddingService import EmbeddingService
+from RAG.src.core.entities import Document, VectorSearchResult
+from RAG.src.core.interfaces import IVectorStore
+from RAG.src.application.services.EmbeddingService import EmbeddingService
 
 class ChromaVectorStore(IVectorStore):
     def __init__(self, persist_directory: str = "./chroma_db"):

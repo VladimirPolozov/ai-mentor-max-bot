@@ -5,6 +5,8 @@ load_dotenv()
 
 
 class Config:
+    MAX_BOT_TOKEN = os.getenv("MAX_BOT_TOKEN")
+
     # API
     API_KEY = os.getenv("API_KEY")
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
