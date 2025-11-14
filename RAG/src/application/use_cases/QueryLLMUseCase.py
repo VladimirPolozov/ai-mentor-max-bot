@@ -1,6 +1,6 @@
 from typing import Optional
-from src.core.entities import LLMResponse, QueryRequest, VectorSearchResult
-from src.core.interfaces import IVectorStore, ILLMProvider
+from RAG.src.core.entities import LLMResponse, QueryRequest, VectorSearchResult
+from RAG.src.core.interfaces import IVectorStore, ILLMProvider
 
 
 class QueryLLMUseCase:

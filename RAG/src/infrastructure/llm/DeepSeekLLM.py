@@ -1,7 +1,7 @@
 from typing import Optional
 from openai import OpenAI
-from src.core.entities import LLMResponse
-from src.core.interfaces import ILLMProvider
+from RAG.src.core.entities import LLMResponse
+from RAG.src.core.interfaces import ILLMProvider
 import asyncio
 
 

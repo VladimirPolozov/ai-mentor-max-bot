@@ -1,12 +1,12 @@
 import sys
 import os
 
-from src.application.use_cases.BuildVectorStoreUseCase import BuildVectorStoreUseCase
-from src.application.use_cases.QueryLLMUseCase import QueryLLMUseCase
-from src.core.entities import QueryRequest, LLMResponse
-from src.infrastructure.file_reader.FileReader import FileReader
-from src.infrastructure.llm.DeepSeekLLM import DeepSeekLLM
-from src.infrastructure.vector_store.ChromaVectorStore import ChromaVectorStore
+from RAG.src.application.use_cases.BuildVectorStoreUseCase import BuildVectorStoreUseCase
+from RAG.src.application.use_cases.QueryLLMUseCase import QueryLLMUseCase
+from RAG.src.core.entities import QueryRequest, LLMResponse
+from RAG.src.infrastructure.file_reader.FileReader import FileReader
+from RAG.src.infrastructure.llm.DeepSeekLLM import DeepSeekLLM
+from RAG.src.infrastructure.vector_store.ChromaVectorStore import ChromaVectorStore
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 

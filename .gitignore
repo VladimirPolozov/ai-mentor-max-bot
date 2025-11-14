@@ -1,1 +1,23 @@
 .env
+models/
+.cache/
+chroma_db/pip show hf_xet
+__pycache__/config.cpython-313.pyc
+bot/__pycache__/bot_builder.cpython-313.pyc
+bot/handlers/__pycache__/on_message.cpython-313.pyc
+bot/handlers/__pycache__/on_start.cpython-313.pyc
+RAG/chroma_db/chroma.sqlite3
+RAG/chroma_db/e57cde88-af1f-4c6e-8688-2d754bc26fb6/data_level0.bin
+RAG/chroma_db/e57cde88-af1f-4c6e-8688-2d754bc26fb6/header.bin
+RAG/chroma_db/e57cde88-af1f-4c6e-8688-2d754bc26fb6/length.bin
+RAG/chroma_db/e57cde88-af1f-4c6e-8688-2d754bc26fb6/link_lists.bin
+RAG/img/__pycache__/html_img.cpython-313.pyc
+RAG/src/__pycache__/main.cpython-313.pyc
+RAG/src/application/services/__pycache__/EmbeddingService.cpython-313.pyc
+RAG/src/application/use_cases/__pycache__/BuildVectorStoreUseCase.cpython-313.pyc
+RAG/src/application/use_cases/__pycache__/QueryLLMUseCase.cpython-313.pyc
+RAG/src/core/__pycache__/entities.cpython-313.pyc
+RAG/src/core/__pycache__/interfaces.cpython-313.pyc
+RAG/src/infrastructure/file_reader/__pycache__/FileReader.cpython-313.pyc
+RAG/src/infrastructure/llm/__pycache__/DeepSeekLLM.cpython-313.pyc
+RAG/src/infrastructure/vector_store/__pycache__/ChromaVectorStore.cpython-313.pyc

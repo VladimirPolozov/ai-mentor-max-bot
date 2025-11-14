@@ -1,4 +1,4 @@
-from src.core.interfaces import IFileReader, IVectorStore
+from RAG.src.core.interfaces import IFileReader, IVectorStore
 
 
 class BuildVectorStoreUseCase:

@@ -3,7 +3,7 @@ from typing import List
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-from src.core.interfaces import IEmbeddingService
+from RAG.src.core.interfaces import IEmbeddingService
 
 
 class EmbeddingService(IEmbeddingService):

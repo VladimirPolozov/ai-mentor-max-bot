@@ -1,3 +1,5 @@
+# запуск RAG сервиса
+
 import os
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -8,10 +10,10 @@ from datetime import datetime
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.security import APIKeyHeader
 from config import Config
-from src.core.entities import QueryRequest, LLMResponse
-from src.main import QuerySystem
+from RAG.src.core.entities import QueryRequest, LLMResponse
+from RAG.src.main import QuerySystem
 from starlette.responses import HTMLResponse
-from img.html_img import html_img
+from RAG.img.html_img import html_img
 
 # Аутентификация по API ключу
 API_KEY = Config.API_KEY

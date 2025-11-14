@@ -2,8 +2,8 @@ import os
 from typing import List
 
 from config import Config
-from src.core.entities import Document
-from src.core.interfaces import IFileReader
+from RAG.src.core.entities import Document
+from RAG.src.core.interfaces import IFileReader
 from docx import Document as DocxDocument
 
 
