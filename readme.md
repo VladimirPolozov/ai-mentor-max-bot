@@ -76,7 +76,6 @@ docker-compose up --build
 .
 ├── main.py                 # Точка входа бота (aiomax)
 ├── config.py               # Загрузка переменных из .env
-├── .env                    # Секреты (НЕ в Git!)
 │
 ├── bot/                    # Обработчики сообщений из Max
 │   └── handlers/
