@@ -11,7 +11,6 @@ from config import Config
 from src.core.entities import QueryRequest, LLMResponse
 from src.main import QuerySystem
 from starlette.responses import HTMLResponse
-from img.html_img import html_img
 
 # Аутентификация по API ключу
 API_KEY = Config.API_KEY
@@ -57,12 +56,6 @@ async def health_check():
         "async": True
     }
 
-
-@app.get("/")
-async def show_image():
-    """Показывает картинку по ссылке"""
-    html_content = html_img
-    return HTMLResponse(content=html_content)
 
 if __name__ == "__main__":
     import uvicorn
