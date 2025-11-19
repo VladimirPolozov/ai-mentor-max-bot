@@ -75,13 +75,13 @@ docker-compose up --build
 ```bash
 .
 ├── main.py                 # Точка входа бота (aiomax)
+├── app.py                  # FastAPI-сервис (порт 8000)
 ├── config.py               # Загрузка переменных из .env
 │
 ├── bot/                    # Обработчики сообщений из Max
 │   └── handlers/
 │
 └── RAG/                    # RAG-ядро: поиск + ИИ
-    ├── app.py              # FastAPI-сервис (порт 8000)
     ├── src/                # Чистая архитектура: use cases, core, infra
     ├── data/               # База знаний (.docx)
     └── chroma_db/          # Векторная БД (генерируется автоматически)

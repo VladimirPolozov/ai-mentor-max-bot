@@ -14,7 +14,7 @@ load_dotenv()
 
 from config import Config
 
-API_URL = "http://localhost:8000"
+API_URL = "http://localhost:8080"
 API_KEY = Config.API_KEY
 
 
@@ -53,4 +53,4 @@ async def test_query(question: str):
 
 
 if __name__ == "__main__":
-    asyncio.run(test_query("Какие есть правила вежливости в дирекции?"))
+    asyncio.run(test_query("Кто ректор?"))

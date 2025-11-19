@@ -18,7 +18,6 @@ class FileReader(IFileReader):
             file_path = os.path.join(directory_path, filename)
 
             if filename.endswith('.txt'):
-                # ---- TXT ----
                 try:
                     with open(file_path, 'r', encoding='utf-8') as file:
                         content = file.read()
@@ -27,7 +26,6 @@ class FileReader(IFileReader):
                     continue
 
             elif filename.endswith('.docx'):
-                # ---- DOCX ----
                 try:
                     docx_file = DocxDocument(file_path)
                     content = "\n".join(p.text for p in docx_file.paragraphs if p.text.strip())
@@ -36,7 +34,6 @@ class FileReader(IFileReader):
                     continue
 
             else:
-                # пропускаем остальные типы
                 continue
 
             document = Document(

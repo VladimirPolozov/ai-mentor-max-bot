@@ -1,4 +1,3 @@
-from typing import Optional
 from RAG.src.core.entities import LLMResponse, QueryRequest, VectorSearchResult
 from RAG.src.core.interfaces import IVectorStore, ILLMProvider
 
@@ -12,22 +11,18 @@ class QueryLLMUseCase:
         """
         Асинхронный запрос к LLM с контекстом из релевантных документов
         """
-        # 1. Асинхронный поиск релевантных документов
         search_results: list[VectorSearchResult] = await self.vector_store.search(
             query=query_request.question,
             k=query_request.top_k
         )
 
-        # 2. Формирование контекста
         context = self._build_context(search_results)
 
-        # 3. Асинхронная генерация ответа LLM
         response = await self.llm_provider.generate_response(
             prompt=query_request.question,
             context=context
         )
 
-        # 4. Возврат LLMResponse
         return response
 
     def _build_context(self, search_results: list[VectorSearchResult]) -> str:

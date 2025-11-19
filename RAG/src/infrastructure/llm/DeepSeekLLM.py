@@ -11,7 +11,6 @@ class DeepSeekLLM(ILLMProvider):
         self.base_url = base_url
         self.model_name = "deepseek/deepseek-chat-v3-0324"
 
-        # Инициализируем OpenAI клиент once
         self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
 
     def _sync_generate(self, full_prompt: str) -> LLMResponse:
@@ -28,7 +27,6 @@ class DeepSeekLLM(ILLMProvider):
 
     async def generate_response(self, prompt: str, context: Optional[str] = None) -> LLMResponse:
         full_prompt = self._build_prompt(prompt, context)
-        # оборачиваем sync вызов в отдельный поток
         result = await asyncio.to_thread(self._sync_generate, full_prompt)
         return result
 

@@ -11,7 +11,7 @@ async def handle_user_query(message: Message):
     if not question:
         return
 
-    url = "https://yearly-flexible-canvasback.cloudpub.ru/query"
+    url = "http://127.0.0.1:8000/query"
     headers = {
         "X-API-Key": Config.API_KEY,
         "Content-Type": "application/json"

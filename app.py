@@ -4,16 +4,14 @@ import os
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-import asyncio
-from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.security import APIKeyHeader
 from config import Config
 from RAG.src.core.entities import QueryRequest, LLMResponse
-from RAG.src.main import QuerySystem
-from starlette.responses import HTMLResponse
-from RAG.img.html_img import html_img
+from RAG.src.entrypoint.QuerySystem import QuerySystem
+
 
 # Аутентификация по API ключу
 API_KEY = Config.API_KEY
@@ -58,13 +56,6 @@ async def health_check():
         "thread_pool_workers": MAX_WORKERS,
         "async": True
     }
-
-
-@app.get("/")
-async def show_image():
-    """Показывает картинку по ссылке"""
-    html_content = html_img
-    return HTMLResponse(content=html_content)
 
 if __name__ == "__main__":
     import uvicorn

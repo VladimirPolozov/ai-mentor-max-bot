@@ -1,6 +1,5 @@
 import asyncio
 from typing import List
-import numpy as np
 from sentence_transformers import SentenceTransformer
 
 from RAG.src.core.interfaces import IEmbeddingService
